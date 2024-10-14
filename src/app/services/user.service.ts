@@ -41,6 +41,11 @@ export class UserService {
     return this.http.delete<any>(`${this.apiUrl}/delExperiencia/${idUser}/${idExp}`);
   }
 
+  getCurrentUser(): Observable<User> {
+    return this.http.get<User>(`${this.apiUrl}`);
+  }
+  
+
 }
 
 
